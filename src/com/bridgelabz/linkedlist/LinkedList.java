@@ -78,7 +78,17 @@ public class LinkedList<T> {
            newNode.next = ptr.next;
            ptr.next = newNode;
        }
-   }  }
+   }
+   public void pop() {
+        {
+            if (this.head != null) {
+                Node temp = this.head;
+                this.head = this.head.next;
+                temp = null;
+            }
+        }}}
+
+
 
 
 
