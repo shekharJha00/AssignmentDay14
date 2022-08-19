@@ -1,14 +1,21 @@
 package com.bridgelabz.linkedlist;
 
 
-    public class Node<T> {
+class Node<T> {
+    T data;
+    Node<T> next;
 
-        T data;
-        Node<T> next;
 
-        public Node(T data){
-            this.data = data;
-        }
+    Node(T data) {
+        this.data = data;
+        next = null;
     }
+
+}
+
+
+
+
+
 
 
