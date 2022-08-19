@@ -3,7 +3,7 @@ package com.bridgelabz.linkedlist;
 public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
-
+    private int size;
     public void push(T data) {
         Node<T> newNode = new Node<>(data);
         if(head == null){
@@ -36,7 +36,19 @@ public class LinkedList<T> {
                     tail.next = newNode;
         }
         tail = newNode;
-    }}
+    }
+    public void append ( T data ) {
+        Node<T> newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        }else{
+            tail.next = newNode;
+        }
+        tail = newNode;
+    }
+
+
+    }
 
 
 

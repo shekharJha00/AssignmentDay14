@@ -12,6 +12,10 @@ public class LinkedlListMain {
         list2.add(30);
         list2.add(70);
         list2.show();
+        list1.append(56);
+        list1.append(30);
+        list1.append(70);
+        list1.show();
 
     }
 }
