@@ -10,8 +10,10 @@ public class LinkedListMain {
         list3.add(70);
         list3.insertAtMid(30);
         list3.show();
-        list3.pop();
+        list3.popBack();
         list3.show();
+
+
 
 
         }
