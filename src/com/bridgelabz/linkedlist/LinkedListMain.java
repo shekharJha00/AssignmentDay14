@@ -10,9 +10,8 @@ public class LinkedListMain {
         list3.add(70);
         list3.insertAtMid(30);
         list3.show();
-        list3.popBack();
+        list3.insertAtPos(40,2);
         list3.show();
-        list3.search(30);
 
 
 
