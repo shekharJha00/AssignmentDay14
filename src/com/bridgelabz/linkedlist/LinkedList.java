@@ -130,7 +130,52 @@ public class LinkedList<T> {
         else
             System.out.println("Element is not present in the list");
     }
-}
+
+
+
+    public void insertAtPos(int data, int position)
+    {  Node node = new Node(data);
+        node.data = data;
+        node.next= null;
+
+        if (this.head == null) {
+
+            if (position != 0) {
+                return;
+            } else {
+                this.head = node;
+            }
+        }
+
+        if (head != null && position == 0) {
+            node.next = this.head;
+            this.head = node;
+            return;
+        }
+
+        Node current = this.head;
+        Node previous = null;
+
+        int i = 0;
+
+        while (i < position) {
+            previous = current;
+            current = current.next;
+
+            if (current == null) {
+                break;
+            }
+
+            i++;
+        }
+
+        node.next = current;
+        previous.next = node;
+    }
+    }
+
+
+
 
 
 
