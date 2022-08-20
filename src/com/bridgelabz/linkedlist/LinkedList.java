@@ -172,7 +172,49 @@ public class LinkedList<T> {
         node.next = current;
         previous.next = node;
     }
+
+    public void popAt(int position)
+    {if (head == null)
+        return;
+
+
+        Node temp = head;
+
+
+        if (position == 0) {
+            head = temp.next;
+            return;
+        }
+
+
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.next;
+
+
+        if (temp == null || temp.next == null)
+            return;
+
+
+        Node next = temp.next.next;
+
+        temp.next
+                = next;
     }
+
+
+    public int size() {
+        Node temp = head;
+        int count = 0;
+        while (temp != null)
+        {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+
+    }
+}
+
 
 
 
