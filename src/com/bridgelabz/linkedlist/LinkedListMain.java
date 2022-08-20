@@ -12,6 +12,8 @@ public class LinkedListMain {
         list3.show();
         list3.popBack();
         list3.show();
+        list3.search(30);
+
 
 
 
