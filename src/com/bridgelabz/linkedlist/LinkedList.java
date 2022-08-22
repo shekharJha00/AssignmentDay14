@@ -213,7 +213,37 @@ public class LinkedList<T> {
         return count;
 
     }
+
+
+    public void sort() {
+        Node current = head, index = null;
+
+        int temp;
+
+        if (head == null) {
+            return;
+        }
+        else {
+            while (current != null) {
+
+                index = current.next;
+
+                while (index != null) {
+
+                    if ((int)current.data > (int)index.data) {
+                        temp = (int) current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
 }
+
 
 
 
